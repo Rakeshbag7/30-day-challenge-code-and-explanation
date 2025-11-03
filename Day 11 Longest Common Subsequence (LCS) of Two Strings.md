@@ -23,18 +23,18 @@ ace
 ## Sample Output 0
 3
 
-Approach
+## Approach
 
-Read Input:
+## Read Input:
 - Read string A.
 - Read string B.
 
-Initialize DP Table:
+## Initialize DP Table:
 - Create a 2D matrix of size (n+1) x (m+1) where n = len(A) and m = len(B).
 - Initialize all values in this matrix to 0.
 - This table will store the lengths of LCS for different prefixes of A and B.
 
-Fill DP Table (Bottom-Up):
+## Fill DP Table (Bottom-Up):
 - Iterate i from 1 to n:
     - Iterate j from 1 to m:
         - If A[i-1] == B[j-1]:
@@ -44,8 +44,8 @@ Fill DP Table (Bottom-Up):
             - Characters do not match → choose maximum from top or left cell.
             - matrix[i][j] = max(matrix[i-1][j], matrix[i][j-1])
 
-Final Result:
+## Final Result:
 - The bottom-right value matrix[n][m] contains the length of the longest common subsequence.
 
-Output:
+## Output:
 - Print matrix[n][m]
